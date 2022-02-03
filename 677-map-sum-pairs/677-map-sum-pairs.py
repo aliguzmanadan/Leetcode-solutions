@@ -35,10 +35,10 @@ class MapSum:
     def sum(self, prefix: str) -> int:
         trie = self.trie
         for char in prefix:
-            if char in trie.dict:
-                trie = trie.dict[char]
-            else: 
+            if char not in trie.dict:
                 return 0
+            trie = trie.dict[char]
+             
         return trie.total
             
 
