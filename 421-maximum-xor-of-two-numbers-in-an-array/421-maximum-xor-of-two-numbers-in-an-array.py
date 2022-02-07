@@ -1,7 +1,7 @@
 #Trie class  
 class xorTrie:
     """
-    Number are represented in a trie, where each
+    Numbers are represented in a trie, where each
     node is a digit in their binary representation
     """
     
