@@ -3,9 +3,11 @@ class DisjointSetOpt:
 
     #Construct the structure of a given size
     #Initially all ranks are 1 since all nodes are their own roots
+    #Initially there all nodes are isolated
     def __init__(self, size):
         self.array = [x for x in range(size)]
         self.rank = [1] * size
+        self.number_islands = size 
 
     #Find the root of a node x and update roots recursively
     def findRoot(self, x):
@@ -20,6 +22,7 @@ class DisjointSetOpt:
         rootY = self.findRoot(y)
 
         #If the roots are different, check for the rank of the roots
+        #Decrease the amount of islands by one since we are connecting two different islands
         if rootX != rootY:
             if self.rank[rootX] > self.rank[rootY]:
                 self.array[rootY] = rootX
@@ -28,14 +31,12 @@ class DisjointSetOpt:
             else:
                 self.array[rootX] = rootY
                 self.rank[rootY] += 1
+                
+            self.number_islands -= 1
     
     #Return amount of isolated graphs
     def numberIsolated(self):
-        roots_set = set({})
-        for i in range(len(self.array)):
-            root = self.findRoot(i)
-            roots_set.add(root)
-        return len(roots_set)
+        return self.number_islands
 
 
 
