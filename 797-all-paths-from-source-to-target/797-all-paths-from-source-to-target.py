@@ -19,3 +19,4 @@ class Solution:
     def allPathsSourceTarget(self, graph: List[List[int]]) -> List[List[int]]:
         return self.allPathsSourceTargeRecursive(graph, 0, len(graph)-1)
         
+        
