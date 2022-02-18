@@ -1,1 +1,1 @@
-​
+The idea is to do a DFS to traverse all nodes and copy each visited node and its neighbors while doing the traversal.
