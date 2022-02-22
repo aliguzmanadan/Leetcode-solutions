@@ -1,0 +1,1 @@
+Do a binary search in the smallest array
