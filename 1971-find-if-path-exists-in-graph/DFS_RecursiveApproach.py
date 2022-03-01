@@ -1,5 +1,5 @@
 class Solution:
-    #Create adjancecu list with the list of all edges
+    #Create adjancecy list with the list of all edges
     def adjacencyList(self, n, edges):
             adjancencyList = [[] for i in range(n)]
             for a, b in edges:
