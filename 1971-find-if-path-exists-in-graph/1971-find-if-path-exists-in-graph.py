@@ -30,12 +30,6 @@ class Solution:
                         queue.append(path+[neighbor])
                 visited.add(path[-1])
 
-                    
-<<<<<<< HEAD
+           
         return False
-            
-        
-        
-=======
-        return False
->>>>>>> 6828ef8e74c2acbe21575f60f182679d776e8619
+           
