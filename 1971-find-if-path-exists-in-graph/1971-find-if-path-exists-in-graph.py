@@ -1,3 +1,5 @@
+from collections import deque
+
 class Solution:
     #Create adjancecy list with the list of all edges
     def adjacencyList(self, n, edges):
@@ -30,6 +32,3 @@ class Solution:
 
                     
         return False
-            
-        
-        
